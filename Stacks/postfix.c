@@ -1,4 +1,4 @@
-//Implementation of stack
+//Infix to PostFix expression
 #include<stdio.h>
 #define max 10
 char stack[max];
