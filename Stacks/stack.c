@@ -60,3 +60,30 @@ void display()
 		printf("%d\n",stack[i]);
 	}
 }
+/*
+OUTPUT:
+enter ur choice 1.push 2.pop1
+enter the element to be inserted 12
+12
+
+ enter 1 to continue1
+enter ur choice 1.push 2.pop1
+enter the element to be inserted 34
+34
+12
+
+ enter 1 to continue1
+enter ur choice 1.push 2.pop1
+enter the element to be inserted 56
+56
+34
+12
+
+ enter 1 to continue1
+enter ur choice 1.push 2.pop2
+the poped element is 56
+34
+12
+
+ enter 1 to continue
+ */
