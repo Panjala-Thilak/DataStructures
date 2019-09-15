@@ -30,7 +30,7 @@ int main()
 					else
 					{
 						n=pop();
-						printf("the poped element is %d",n);
+						printf("the poped element is %d \n",n);
 						display();
 					}
 					break;
@@ -57,6 +57,6 @@ void display()
 	int i;
 	for(i=top;i>=0;i--)
 	{
-		printf("%d->",stack[i]);
+		printf("%d\n",stack[i]);
 	}
 }
