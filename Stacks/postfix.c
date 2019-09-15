@@ -71,3 +71,7 @@ int pop()
 {
 	return stack[top--];
 }
+/*OUTPUT
+enter the infix expression 2+3*4/5
+234*5/+
+*/
