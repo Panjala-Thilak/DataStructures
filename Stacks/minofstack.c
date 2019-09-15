@@ -86,4 +86,25 @@ int pop1()
 {
 	return minstack[top1--];
 }
-
+/*
+OUTPUT
+enter ur choice 1.push 2.pop1
+enter the element to be inserted 2
+the elements in the stack are:
+ 2
+the minimum element in the stack is 2
+ enter 1 to continue1
+enter ur choice 1.push 2.pop1
+enter the element to be inserted 1
+the elements in the stack are:
+ 1
+2
+the minimum element in the stack is 2
+ enter 1 to continue1
+enter ur choice 1.push 2.pop2
+the poped element is 1
+the elements in the stack are:
+2
+the minimum element in the stack is 2
+ enter 1 to continue
+ */
