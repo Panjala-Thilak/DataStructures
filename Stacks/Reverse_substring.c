@@ -55,3 +55,8 @@ int main()
 		display();
 		return 0;
 }
+/*
+OUTPUT
+enter the string(gniedoc(love)i)
+ilovecodeing
+*/
