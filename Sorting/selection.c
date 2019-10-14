@@ -1,15 +1,17 @@
+//SELECTION SORT
 #include<stdio.h>
 void selection(int a[],int n)
 {
 	int i,j;
 	for(i=0;i<n-1;i++)
 	{
-		int min=i;
+		int min=i;//min stores the index of minimum value
 		for(j=i+1;j<n;j++)
 		{
 			if(a[min]>a[j])
 			min=j;
 		}
+		//swap
 		int temp=a[i];
 		a[i]=a[min];
 		a[min]=temp;
