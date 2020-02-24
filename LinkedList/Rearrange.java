@@ -26,3 +26,9 @@ public class Rearrange
         System.out.println(ll1);
 	}
 }
+/*
+OUTPUT
+5 1 2 3 4 5
+[1, 2, 3, 4, 5]
+[1, 5, 2, 4, 3]
+*/
