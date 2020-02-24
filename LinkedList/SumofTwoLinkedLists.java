@@ -59,3 +59,9 @@ public class SumofTwoLinkedLists
         System.out.println(ll2);
 	}
 }
+/*
+OUTPUT
+3 1 2 3
+3 1 2 3
+[2, 4, 6]
+*/
