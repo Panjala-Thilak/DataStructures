@@ -1,20 +1,58 @@
 //Implementation of stack using Linked list
-#include<stdio.h>
+#include<stdlib.h>
+#include <stdio.h>
 struct node
 {
-	int data;
-	struct node *next;
-}*head=NULL;
-int top=-1;
-void display();
-int pop();
-void push();
+    int data;
+    struct node *next;
+};
+struct node *top;
+void push(int x)
+{
+    struct node *temp=(struct node*)malloc(sizeof(struct node));
+    temp->data=x;
+    temp->next=top;
+    top=temp;
+}
+void pop()
+{
+    struct node *temp=top;
+    if(top==NULL)
+    printf("Stack underflow\n");
+    else
+    {
+        top=temp->next;
+        temp->next=NULL;
+        free(temp);
+    }
+}
+void display()
+{
+    if(top==NULL)
+    printf("stack is empty");
+    else
+    {
+    struct node *temp=top;
+    while(temp!=NULL)
+    {
+        printf("%d ",temp->data);
+        temp=temp->next;
+    }
+    }
+}
+void peek()
+{
+    if(top==NULL)   
+    printf("stack is empty");
+    else
+    printf("Top of the stack is %d",top->data);
+}
 int main()
 {
-	int ch,x,c,n;
+    int ch,x,c,n;
 	do
 	{
-		printf("enter your choice 1.push 2.pop");
+		printf("enter your choice 1.push 2.pop 3.peek ");
 		scanf("%d",&ch);
 		switch(ch)
 		{
@@ -23,69 +61,34 @@ int main()
 					scanf("%d",&x);
 					push(x);
 					display();
-				break;
+				    break;
 				
 			case 2:
-						if(top==-1)
-						printf("stack underflow \n");
-						else
-						{
-							n=pop();
-						printf("the poped element is %d \n",n);
-						display();
+			        pop();
+				    display();
 					break;
-				}
+			case 3:
+			        peek();
+			        break;
 			default:printf("enter the valid choice ");
-
-					
 		}
-		printf("\n enter 1 to continue");
+		printf("\n enter 1 to continue ");
 		scanf("%d",&c);
 	}while(c==1);
-	
-	return 1;
+    return 0;
 }
-void push(int x)
-{
-	top++;
-	struct node *temp=(struct node*)malloc(sizeof(struct node));
-	temp->data=x;
-	temp->next=head;
-	head=temp;
-}
-int pop()
-{
-	int x;
-	struct node *temp=head;
-	head=temp->next;
-	 x=temp->data;
-	free(temp);
-	return x;
-}
-void display()
-{
-	struct node *temp=head;
-	while(temp!=NULL)
-	{
-		printf("%d\n ",temp->data);
-		temp=temp->next;
-	}
-}
-/*OUUTPUT
-enter your choice 1.push 2.pop1
-enter the element to be inserted 12
-12
 
- enter 1 to continue1
-enter your choice 1.push 2.pop1
-enter the element to be inserted 34
-34
- 12
-
- enter 1 to continue1
-enter your choice 1.push 2.pop2
-the poped element is 34
-12
-
- enter 1 to continue
+/*OUTPUT
+enter your choice 1.push 2.pop 3.peek 1                                                                                          
+enter the element to be inserted 12                                                                                              
+12                                                                                                                               
+ enter 1 to continue 1                                                                                                           
+enter your choice 1.push 2.pop 3.peek 1                                                                                          
+enter the element to be inserted 42    
+enter 1 to continue 1                                                                                                           
+enter your choice 1.push 2.pop 3.peek 2                                                                                          
+12                                                                                                                               
+ enter 1 to continue 1                                                                                                           
+enter your choice 1.push 2.pop 3.peek 2                                                                                          
+stack is empty   
  /*
