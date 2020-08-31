@@ -102,3 +102,15 @@ algorithm = Algorithm();
 algorithm.dijkstra(vertexList, node1);
 algorithm.getShortestPath(node7);
 
+
+
+'''
+OUTPUT:
+shortest path is 25
+G 
+C 
+F 
+E 
+A 
+'''
+
